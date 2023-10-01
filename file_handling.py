@@ -1,0 +1,22 @@
+'''file=open("file_data.txt","a+")
+#file.write("Welcome to data handling")
+print(file.tell())
+file.write('hello connections')
+print(file.tell())
+file.write(' this is file handling')
+print(file.tell())
+file.seek(0)
+print(file.tell())
+data=file.read()
+#file.write('how are you guysizza')
+
+print(data)
+print(file.tell())
+file.close()
+file.write(' This is the great learning ahead')
+file.seek(0)
+data=file.read()
+print(data)'''
+
+f1=open("C:\Users\Surya Pratap Singh\python vs code\gui_of_python.py\codeclause\oops_python\Screenshot (46).png",'rb')
+print(f1.read())
