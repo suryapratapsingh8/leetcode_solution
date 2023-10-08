@@ -1,0 +1,19 @@
+class Solution:
+    def furthestDistanceFromOrigin(self, moves: str) -> int:
+        cr=0
+        cl=0
+        sp=0
+        for i in moves:
+            if i=='L':
+                cl+=1
+            elif i=='R':
+                cr+=1
+            else:
+                sp+=1
+        
+        if cr>cl:
+            return cr-cl+sp
+        else:
+            return cl-cr+sp
+            
+        
