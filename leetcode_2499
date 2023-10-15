@@ -1,0 +1,16 @@
+lass Solution:
+    def equalFrequency(self, s: str) -> bool:
+        arr = list(s)
+        for i in range(len(arr)):
+            hashmap = {}
+            temp = Counter(arr[0:i]+arr[i+1:])
+            for k in temp:
+                if temp[k] not in hashmap:
+                    hashmap[temp[k]] = [k]
+                else:
+                    hashmap[temp[k]].append(k)
+            maxx = max(hashmap)
+            minn = min(hashmap)
+            if maxx == minn:
+                return True
+        return False
