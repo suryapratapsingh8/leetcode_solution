@@ -1,0 +1,12 @@
+rom collections import Counter
+class Solution:
+    def digitCount(self, num: str) -> bool:
+        dic=Counter(num)
+        c=0
+        for i in range(len(num)):
+            if dic[str(i)]==int(num[i]):
+                c+=1
+                
+        if c==len(num):
+            return 1
+        return 0
