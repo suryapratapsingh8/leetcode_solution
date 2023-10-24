@@ -1,0 +1,19 @@
+class Solution:
+    def rearrange(self,arr, n):
+        # code here
+        arr1=[];arr2=[];ans=[]
+        for item in arr:
+            if item>=0:
+                arr1.append(item)
+            else:
+                arr2.append(item)
+        
+        l=min(len(arr1),len(arr2))
+        for i in range(l):
+            ans.append(arr1[i])
+            ans.append(arr2[i])
+        ans+=arr1[l:]+arr2[l:]
+        for i in range(len(ans)):
+            arr[i]=ans[i]
+            
+        return arr
