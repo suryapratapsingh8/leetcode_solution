@@ -1,0 +1,19 @@
+class Solution:
+    def allPairs(self, A, B, N, M, X):
+        # Your code goes here 
+        
+        d1={}
+        for i in A:
+            d1[i]=1
+        d2={}
+        for i in B:
+            d2[i]=1
+        arr=[]
+        
+        A.sort()
+        for i in A:
+            k=X-i
+            if k in d2:
+                arr.append([i,k])
+                
+        return arr
