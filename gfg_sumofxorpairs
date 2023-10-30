@@ -1,0 +1,16 @@
+class Solution:
+    def sumXOR (self, arr, n) : 
+        #Complete the function
+        ans = 0
+        bit = 1
+        maxbin = len(bin(max(arr))) - 2 
+        for i in range(maxbin+1):
+            count = 0
+            for j in range(n):
+                #print(bit)
+                if arr[j] & (bit):
+                    count+=1
+            #print(count,bit)
+            ans += (bit)*count*(n-count)
+            bit = bit << 1
+        return ans
