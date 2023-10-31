@@ -1,0 +1,9 @@
+
+class Solution:
+	def pushZerosToEnd(self,arr, n):
+    	# code here
+        pos = 0
+        for i in range(n):
+            if(arr[i]!=0):
+                arr[pos],arr[i] = arr[i],arr[pos]
+                pos += 1
