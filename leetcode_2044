@@ -1,0 +1,26 @@
+class Solution:
+    def countMaxOrSubsets(self, nums: List[int]) -> int:
+        subsets = [[]]
+
+        for i in nums:
+            subsets += [lst + [i] for lst in subsets]
+        
+        for i, s in enumerate(subsets):
+            bitwise_or = 0
+            for j in range(len(s)):
+                bitwise_or |= s[j]
+            
+            s.append(bitwise_or)
+        
+        subsets = list(sorted(subsets, key=lambda x:-x[-1]))
+
+        max_or = subsets[0][-1]
+
+        count = 0
+        for i, s in enumerate(subsets):
+            if s[-1] == max_or:
+                count += 1
+            else:
+                break
+
+        return count
