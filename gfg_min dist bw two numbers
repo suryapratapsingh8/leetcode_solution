@@ -1,0 +1,15 @@
+class Solution:
+    def minDist(self, arr, n, x, y):
+        xMax = -1
+        yMax = -1
+        ans = float('inf')
+        for i in range(n):
+            if arr[i] == x:
+                xMax = max(i,xMax)
+            if arr[i] == y:
+                yMax = max(i,yMax)
+            if(xMax!=-1 and yMax!=-1):
+                ans = min(ans,abs(yMax-xMax))
+        if xMax == -1 or yMax == -1:
+            return -1
+        return ans
