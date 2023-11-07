@@ -1,0 +1,15 @@
+
+
+class Solution:
+    
+
+    def sumTriangles(self,matrix, n):
+        # code here 
+        fval,lval=0,0
+        for i in range(n):
+            for j in range(i,n):
+                fval+=matrix[i][j]
+            for k in range(i+1):
+                lval+=matrix[i][k]
+        return fval,lval
+        
