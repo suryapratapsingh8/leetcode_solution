@@ -1,0 +1,16 @@
+
+#User function Template for python3
+
+class Solution:
+    
+    #Function to return list of integers visited in snake pattern in matrix.
+    def snakePattern(self, matrix): 
+       # code here 
+        ans=[]
+        n=len(matrix)
+        for i in range(n):
+            if(i%2==0):
+                ans+=matrix[i]
+            else:
+                ans+=matrix[i][::-1]
+        return ans
