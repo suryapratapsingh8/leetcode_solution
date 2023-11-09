@@ -1,0 +1,18 @@
+class Solution:
+    def columnWithMaxZeros(self,arr,N):
+        # code here 
+        max_col=-1
+        ans=-1
+        for i in range(N):
+            counter=0
+            for j in range(N):
+                if arr[j][i]==0:
+                    counter+=1
+            if counter==N:
+                return i
+                    
+            if counter>0 and counter>ans:
+                ans=counter
+                max_col=i
+            
+        return max_col
