@@ -1,0 +1,10 @@
+
+class Solution:    
+    def countX(self,L,R,x):
+        #code here
+        c=0
+        for i in range(L+1,R):
+            k=str(i)
+            y=str(x)
+            c+=k.count(y)
+        return c
