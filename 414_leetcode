@@ -1,0 +1,17 @@
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        if len(nums)==1:
+            return nums[0]
+        if len(nums)==2:
+            if nums[0]>nums[1]:
+                return nums[0]
+            else:
+                return nums[1]
+        k=list(set(nums))
+        if len(k)==1:
+            return k[0]
+        if len(k)==2:
+            return max(k[1],k[0])
+        k.sort(reverse=True)
+
+        return k[2]
