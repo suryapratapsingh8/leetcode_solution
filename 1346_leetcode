@@ -1,0 +1,10 @@
+class Solution:
+    def checkIfExist(self, arr: List[int]) -> bool:
+        d={}
+        for i in arr:
+            if i*2 in d or (i&1==0 and i//2 in d):
+                return True
+            else:
+                d[i]=1 
+        else:
+            return False
