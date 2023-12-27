@@ -1,0 +1,22 @@
+#User function Template for python3
+
+class Solution:
+    def antiDiagonalPattern(self,m):
+        # Code here
+        n=len(matrix)
+        m=len(matrix[0])
+        col=0
+        row=0
+        ans=[]
+        while (col<m and row<n):
+            i=col
+            j=row
+            while (i>=0 and j<n ):
+                ans.append(matrix[j][i])
+                i-=1
+                j+=1
+            if(col<m-1):
+                col+=1
+            else:
+                row+=1
+        return ans
