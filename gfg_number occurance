@@ -1,0 +1,15 @@
+#User function Template for python3
+
+class Solution:
+    def singleElement(self, arr, N):
+        # code here 
+        d={}
+        for i in arr:
+            if i in d:
+                d[i]+=1
+            else:
+                d[i]=1
+        
+        for i,j in d.items():
+            if j==1:
+                return i
