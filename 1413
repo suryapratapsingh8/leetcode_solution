@@ -1,0 +1,10 @@
+class Solution:
+    def minStartValue(self, nums: List[int]) -> int:
+        m=0
+        curr=0
+        for i in nums:
+            curr+=i
+            if curr<m:
+                m=curr
+
+        return abs(m)+1
